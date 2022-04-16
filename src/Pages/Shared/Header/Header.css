@@ -1,3 +1,10 @@
+.logo-container a {
+    text-decoration: none;
+}
+.logo-container a h3{
+    margin-bottom: 0;
+}
+
 .navbar-container a,
 button {
     text-decoration: none;

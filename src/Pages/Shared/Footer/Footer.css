@@ -35,7 +35,7 @@
     outline: none;
 }
 
-.copyrights{
+.copyrights {
     background: #2C2C2C;
     height: 50px;
 }
@@ -48,4 +48,8 @@
     color: #EBB85E;
     font-size: 18px;
     font-weight: 500;
+}
+
+.copyrights a:hover {
+    color: #EBB85E;
 }
