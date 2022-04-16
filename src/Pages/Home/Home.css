@@ -1,0 +1,31 @@
+.home {
+    height: 600px;
+    background: url(../../images/banner/background.png);
+    background-position: center center;
+}
+
+.header-text h4{
+    color: #EBB85E;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.header-text h1{
+    font-size: 58px;
+    font-weight: 300;
+}
+
+.header-text h1 span{
+    font-weight: 700;
+}
+
+.header-text p{
+    font-size: 18px;
+}
+
+.header-text .header-btn{
+    background-color: rgba(0, 0, 0, 0);
+    padding: 10px 25px;
+    border: 2px solid #EBB85E;
+    font-weight: 400;
+}
