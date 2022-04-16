@@ -1,0 +1,23 @@
+.navbar-container a,
+button {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.navbar-container a:hover {
+    color: white;
+}
+
+.navbar-container .btn-login {
+    border: 2px solid #EBB85E !important;
+    padding: 8px 25px;
+    background-color: #212529;
+}
+
+/* .navbar-container .btn-login:hover{
+    border: 1px solid #EBB85E !important;
+    background-color: #212529;
+    padding: 8px 25px;
+} */
