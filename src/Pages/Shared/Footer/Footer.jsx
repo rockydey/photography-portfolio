@@ -10,7 +10,7 @@ const Footer = () => {
                 <div className='container d-flex justify-content-between'>
                     <div className='about'>
                         <h1 className='text-white'>About Me</h1>
-                        <p className='text-muted'>My name is Jonathan Davis and I’m professional photographer and retoucher. I’m offering my services to individual and corporate clients throughout the USA. Make your favorite life moment or event last and remain in your memory!</p>
+                        <p className='text-muted'>My name is Bjarne Davis and I’m professional photographer and retoucher. I’m offering my services to individual and corporate clients throughout the world. Make your favorite life moment or event last and remain in your memory!</p>
                     </div>
                     <div className='newsletter'>
                         <h1 className='text-white'>Newsletter</h1>

@@ -1,0 +1,44 @@
+[
+    {
+        "id": "625b12868d2564919ef92a2b",
+        "picture": "https://i.ibb.co/p1NCWKx/jakob-owens-MCZwgyj-Xb-Q0-unsplash.jpg",
+        "price": 1200,
+        "name": "Video & Film",
+        "description": "Video and film production is the only art form that can almost communicate the emotional values that a face-to-face conversation can. You can make your audience feel, learn, understand, change, and take action all from watching your 3-minute video. That is powerful."
+    },
+    {
+        "id": "625b1286c06b9c15aafa1d95",
+        "picture": "https://i.ibb.co/TtZ1QyR/kelly-huang-2b-Zna-Kf-M2-JA-unsplash.jpg",
+        "price": 1000,
+        "name": "Video Production",
+        "description": "Video has long been touted as the marketing medium of the future, but the future is here. If you’re worried about getting started, no need. Even if you can’t afford to hire an in-house video production team, there are several highly-skilled companies that offer the video production services you need."
+    },
+    {
+        "id": "625b1286bf528ac56f6ed955",
+        "picture": "https://i.ibb.co/gPsqW67/pexels-farddin-protik-2106463.jpg",
+        "price": 800,
+        "name": "Fashion Photography",
+        "description": "Fashion and model photography has been at the core of our business from the very beginning. With many years of experience creating high-quality images, our industry knowledge and fashionable eye for detail will enable you to have the confidence to know with each season, your products will always look their best."
+    },
+    {
+        "id": "625b128697822a2fed611b5e",
+        "picture": "https://i.ibb.co/d2H3Ght/jonathan-borba-eg-72f-I9w-K4-unsplash.jpg",
+        "price": 900,
+        "name": "Wedding Photography",
+        "description": "If you’re getting married, you’re about to embark on a life-changing journey. Not one day will ever go by after your ceremony that isn’t in some way affected by this decision. It’s truly a special thing to find “the one” that’s going to make you happy and grow old with you. Now that the euphoria of that decision has worn off, at least a little bit."
+    },
+    {
+        "id": "625b12864554ded689123998",
+        "picture": "https://i.ibb.co/n6JGTrh/pexels-askar-abayev-5638701.jpg",
+        "price": 200,
+        "name": "Photo Shoots",
+        "description": "High-quality photography is critical in capturing and engaging the attention of your online audience. Professionally shot, recent photos of your team and location help you build trust online. We have a pool of creative artists who produce incredible images for our clients."
+    },
+    {
+        "id": "625b1286e23b23c6b97e1614",
+        "picture": "https://i.ibb.co/VghG3Xp/cdc-SAwx-J8-PHY3-Q-unsplash.jpg",
+        "price": 500,
+        "name": "Family Photography",
+        "description": "There is a lot to think about, but as a family photographer, it’s my pleasure to guide you through it.  You’ll tell me what you want from the session – your ideas, your style and the types of pictures you desire. Let’s make that vision of a family portrait that you’ve had in your head finally become a reality."
+    }
+]
