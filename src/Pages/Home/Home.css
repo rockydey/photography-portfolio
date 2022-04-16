@@ -4,33 +4,40 @@
     background-position: center center;
 }
 
-.header-text h4{
+.header-text h4 {
     color: #EBB85E;
     font-size: 22px;
     font-weight: 600;
 }
 
-.header-text h1{
+.header-text h1 {
     font-size: 58px;
     font-weight: 300;
 }
 
-.header-text h1 span{
+.header-text h1 span {
     font-weight: 700;
 }
 
-.header-text p{
+.header-text p {
     font-size: 18px;
 }
 
-.header-text .header-btn{
+.header-text .header-btn {
     background-color: rgba(0, 0, 0, 0);
     padding: 10px 25px;
     border: 2px solid #EBB85E;
     font-weight: 400;
 }
 
-.service-container .services{
+.service-container h1,
+.portfolio-container h1 {
+    background-image: url(../../images/title-bg/bg-title.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.service-container .services {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 50px;
