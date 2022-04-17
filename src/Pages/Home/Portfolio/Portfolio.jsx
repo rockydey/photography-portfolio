@@ -13,8 +13,7 @@ import portfolio9 from '../../../images/portfolio/portfolio-9.jpg'
 
 const Portfolio = () => {
     return (
-        <div className='container'>
-            <div className='portfolio'>
+            <div className='container portfolio'>
                 <img width={418} className='rounded-3' src={portfolio1} alt="" />
                 <img width={418} className='rounded-3' src={portfolio2} alt="" />
                 <img width={418} className='rounded-3' src={portfolio3} alt="" />
@@ -25,7 +24,6 @@ const Portfolio = () => {
                 <img width={418} className='rounded-3' src={portfolio8} alt="" />
                 <img width={418} className='rounded-3' src={portfolio9} alt="" />
             </div>
-        </div>
     );
 };
 

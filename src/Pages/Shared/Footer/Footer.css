@@ -53,3 +53,33 @@
 .copyrights a:hover {
     color: #EBB85E;
 }
+
+@media only screen and (max-width: 768px) {
+
+    .about,
+    .newsletter {
+        width: 400px;
+    }
+
+    .newsletter input:not([type=submit]) {
+        padding: 10px 75px 10px 30px;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .about {
+        display: none;
+    }
+
+    .copyrights p {
+        font-size: 14px;
+    }
+
+    .footer {
+        height: 250px;
+    }
+
+    .newsletter input:not([type=submit]) {
+        padding: 10px 120px 10px 40px;
+    }
+}
