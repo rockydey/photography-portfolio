@@ -44,12 +44,6 @@
     padding: 8px 35px !important;
 }
 
-.login-form .submit-btn:hover {
-    border: 1px solid #EBB85E;
-    color: #EBB85E !important;
-    background-color: white;
-}
-
 .login-form .have-account .line {
     border: 1px solid rgba(128, 128, 128, 0.2);
 }

@@ -1,16 +1,35 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './Login.css';
-import google from '../../images/social/google.png'
-import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import google from '../../images/social/google.png';
+import { useSignInWithGoogle, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 
 const Login = () => {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
     const navigate = useNavigate();
+
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
-    if (user) {
+    const [signInWithEmailAndPassword, user1, loading1, error1,] = useSignInWithEmailAndPassword(auth);
+
+    const handleEmail = event => {
+        setEmail(event.target.value);
+    }
+    const handlePassword = event => {
+        setPassword(event.target.value);
+    }
+
+    const handleSubmit = event => {
+        event.preventDefault();
+        signInWithEmailAndPassword(email, password);
+    }
+
+    if (user || user1) {
         navigate('/home');
     }
+
     return (
         <div className='w-25 container mx-auto login-form p-4 my-5 rounded-3'>
             <h3>To continue, log in to Davis Photography.</h3>
@@ -22,16 +41,18 @@ const Login = () => {
                     <div style={{ height: "1px" }} className='bg-secondary opacity-25 w-50'></div>
                 </div>
             </div>
-            <form>
+
+            <form onSubmit={handleSubmit}>
                 <label className='mb-2' htmlFor="email">Email Address</label>
-                <input className='mb-3 rounded-3' type="email" name="email" id="email" placeholder='Enter Your Email' />
+                <input onBlur={handleEmail} className='mb-3 rounded-3' type="email" name="email" id="email" placeholder='Enter Your Email' />
                 <label className='mb-2' htmlFor="password">Password</label>
-                <input className='mb-3 rounded-3' type="password" name="password" id="password" placeholder='Enter Your Password' />
+                <input onBlur={handlePassword} className='mb-3 rounded-3' type="password" name="password" id="password" placeholder='Enter Your Password' />
                 <div className='d-flex justify-content-between align-items-center'>
                     <p className='mb-0'>Forget Your Password?</p>
                     <input className='submit-btn text-white rounded-pill ms-auto' type="submit" value="Login" />
                 </div>
             </form>
+
             <div className='have-account text-center'>
                 <div className='line my-4 mx-1'></div>
                 <p className='fw-bold'>Don't have an account?</p>
