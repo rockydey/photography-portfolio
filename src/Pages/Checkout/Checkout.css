@@ -1,0 +1,26 @@
+.checkout-form {
+    border: 2px solid #EBB85E;
+    border-radius: 10px;
+}
+
+.checkout-form form label {
+    font-weight: 500;
+}
+
+.checkout-form form input,
+.checkout-form form textarea {
+    padding: 10px 20px;
+}
+
+.checkout-form form input:focus,
+.checkout-form form textarea:focus {
+    outline: none;
+}
+
+.submit-btn {
+    padding: 10px 30px;
+    background-color: #EBB85E;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+}
