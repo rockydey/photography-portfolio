@@ -55,6 +55,9 @@
 }
 
 @media only screen and (max-width: 768px) {
+    .footer div {
+        align-items: center;
+    }
 
     .about,
     .newsletter {
@@ -62,7 +65,7 @@
     }
 
     .newsletter input:not([type=submit]) {
-        padding: 10px 75px 10px 30px;
+        padding: 10px 60px 10px 30px;
     }
 }
 
