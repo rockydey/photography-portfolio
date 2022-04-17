@@ -40,7 +40,7 @@ const SignUp = () => {
     }
 
     return (
-        <div className='w-25 container mx-auto login-form p-4 my-5 rounded-3'>
+        <div className='container mx-auto login-form p-4 my-5 rounded-3'>
             <h3>To continue, log in to Davis Photography.</h3>
             <div className='google-login'>
                 <button onClick={() => signInWithGoogle()} className='w-100 rounded-pill text-uppercase mt-3 mb-4 d-flex align-items-center justify-content-center'><img width={18} className='me-2' src={google} alt="" /> <span>Sign up with Google</span></button>

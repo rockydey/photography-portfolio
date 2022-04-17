@@ -1,5 +1,6 @@
 .login-form {
     border: 2px solid #EBB85E;
+    width: 400px !important;
 }
 
 .login-form h3 {
@@ -57,7 +58,7 @@
     font-weight: 500;
 }
 
-.google-login button{
+.google-login button {
     border: 1px solid rgba(0, 0, 0, 0.9);
     color: #6a6a6a;
     padding: 8px 35px;
@@ -66,3 +67,8 @@
     font-weight: 500;
 }
 
+@media only screen and (max-with:768px) {
+    .login-form{
+        width: 500px !important;
+    }
+}

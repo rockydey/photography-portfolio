@@ -6,7 +6,7 @@ const Footer = () => {
     return (
         <footer>
             <div className='footer d-flex flex-column justify-content-center'>
-                <div className='container d-flex justify-content-between'>
+                <div className='container d-flex justify-content-between align-items-center'>
                     <div className='about'>
                         <h1 className='text-white'>About Me</h1>
                         <p className='text-muted'>My name is Bjarne Davis and I’m professional photographer and retoucher. I’m offering my services to individual and corporate clients throughout the world. Make your favorite life moment or event last and remain in your memory!</p>
