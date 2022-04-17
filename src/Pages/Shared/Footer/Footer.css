@@ -78,8 +78,4 @@
     .footer {
         height: 250px;
     }
-
-    .newsletter input:not([type=submit]) {
-        padding: 10px 120px 10px 40px;
-    }
 }
