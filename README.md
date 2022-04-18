@@ -11,6 +11,7 @@ Live Website: [Click Here](https://photography-portfolio-website.web.app/).
 - Create blogs page and about me page
 - Use firebase authentication so that user can create account on this website
 - Use Modal and navigate to home page
+- Use active route
 
 ### Frameworks and, Libraries
 
