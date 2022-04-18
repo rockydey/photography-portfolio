@@ -1,13 +1,15 @@
-import { Alert } from 'bootstrap';
 import React, { useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import './Checkout.css';
+import Modal from 'react-bootstrap/Modal'
+import { Button } from 'react-bootstrap';
 
 const Checkout = () => {
 
     const navigate = useNavigate();
+    const [show, setShow] = useState(false);
     const [user] = useAuthState(auth);
     const [name, setName] = useState('');
     const [number, setNumber] = useState(0);
@@ -25,7 +27,7 @@ const Checkout = () => {
 
     const handleSubmit = event => {
         event.preventDefault();
-        navigate('/');
+        setShow(true);
     };
 
     return (
@@ -42,6 +44,14 @@ const Checkout = () => {
                 <textarea onBlur={handleAddress} className='mb-3' name="address" id="address" cols="15" rows="5" required></textarea>
                 <input className='rounded-3 submit-btn text-uppercase border-0' type="submit" value="Add Shipping" />
             </form>
+            <Modal show={show}>
+                <Modal.Body>Thank you for the booking</Modal.Body>
+                <Modal.Footer>
+                    <Button style={{ fontSize: '20px', backgroundColor: '#EBB85E', padding: '8px 25px' }} className='rounded-pill border-0' onClick={() => navigate('/')}>
+                        Return Home
+                    </Button>
+                </Modal.Footer>
+            </Modal>
         </div>
     );
 };
