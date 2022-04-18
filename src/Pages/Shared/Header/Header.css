@@ -1,9 +1,13 @@
-.logo-container{
+.logo-container {
     text-decoration: none;
 }
 
 .logo-container h3 {
     margin-bottom: 0;
+}
+
+.logo-container h3 span {
+    color: #EBB85E;
 }
 
 .navbar-container a,
