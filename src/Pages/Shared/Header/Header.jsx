@@ -5,6 +5,7 @@ import './Header.css';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import { signOut } from 'firebase/auth';
+import CustomLink from './CustomLink/CustomLink';
 
 const Header = () => {
     const [user] = useAuthState(auth);
@@ -20,10 +21,10 @@ const Header = () => {
                         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                         <Navbar.Collapse id="responsive-navbar-nav">
                             <Nav className="ms-auto navbar-container d-flex align-items-center">
-                                <Link className='me-lg-5 mt-3 mt-lg-0' to="/home">Home</Link>
-                                <Link className='me-lg-5 mt-3 mt-lg-0' to="/about">About Me</Link>
-                                <Link className='me-lg-5 mt-3 mt-lg-0' to="/blogs">Blogs</Link>
-                                <Link className='me-lg-5 mt-3 mt-lg-0' to="/checkout">Checkout</Link>
+                                <CustomLink className='me-lg-5 mt-3 mt-lg-0' to="/home">Home</CustomLink>
+                                <CustomLink className='me-lg-5 mt-3 mt-lg-0' to="/about">About Me</CustomLink>
+                                <CustomLink className='me-lg-5 mt-3 mt-lg-0' to="/blogs">Blogs</CustomLink>
+                                <CustomLink className='me-lg-5 mt-3 mt-lg-0' to="/checkout">Checkout</CustomLink>
                                 {
                                     user ? <button onClick={logout} className='border-0 rounded-pill btn-login text-white mt-3 mt-lg-0'>Log out</button> : <Link to="/login" className='mt-3 mt-lg-0'><button className='border-0 rounded-pill btn-login text-white'>Log in</button></Link>
                                 }
