@@ -31,7 +31,7 @@ const Checkout = () => {
     };
 
     return (
-        <div className='w-50 container mx-auto my-5 p-4 checkout-form'>
+        <div className='container mx-auto my-5 p-4 checkout-form'>
             <h3 className='text-center fs-2 fw-bold'>Shipping Information</h3>
             <form onSubmit={handleSubmit} className='d-flex flex-column'>
                 <label className='mb-2' htmlFor="name">Your Name</label>
