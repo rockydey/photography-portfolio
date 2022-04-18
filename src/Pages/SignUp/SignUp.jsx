@@ -4,6 +4,8 @@ import google from '../../images/social/google.png';
 import { Link, useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const SignUp = () => {
 
@@ -17,23 +19,24 @@ const SignUp = () => {
         createUserWithEmailAndPassword,
         user,
         error,
-    ] = useCreateUserWithEmailAndPassword(auth);
+    ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
     const [signInWithGoogle, user1, error1] = useSignInWithGoogle(auth);
 
     const handleEmail = event => {
         setEmail(event.target.value);
-    }
+    };
     const handlePassword = event => {
         setPassword(event.target.value);
-    }
+    };
     const handleConfirmPassword = event => {
         setConfirmPassword(event.target.value);
-    }
+    };
 
     const handleSubmit = event => {
         event.preventDefault();
-        createUserWithEmailAndPassword(email, password)
-    }
+        createUserWithEmailAndPassword(email, password);
+        toast("Verification Email Sent!!");
+    };
 
     if (user || user1) {
         navigate('/home');
@@ -60,7 +63,7 @@ const SignUp = () => {
                 <input onBlur={handleConfirmPassword} className='mb-3 rounded-3' type="password" name="password" id="confirm-password" placeholder='Enter Your Password Again' required />
                 <div className='mb-3'>
                     <input onClick={() => setAgree(!agree)} className='me-2' type="checkbox" name="checkbox" id="checkbox" />
-                    <span className={agree ? "text-success" : "text-danger"}>I accept all terms and conditions.</span>
+                    <label htmlFor='checkbox' className={agree ? "text-success" : "text-danger"}>I accept all terms and conditions.</label>
                 </div>
                 <input disabled={!agree} className='submit-btn text-white rounded-pill' type="submit" value="Sign Up" />
             </form>
@@ -70,6 +73,7 @@ const SignUp = () => {
                 <p className='fw-bold'>Already have an account?</p>
                 <Link to='/login'><button className='w-100 rounded-pill text-uppercase'>Log In Now</button></Link>
             </div>
+            <ToastContainer />
         </div>
     );
 };

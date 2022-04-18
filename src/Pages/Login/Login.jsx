@@ -2,8 +2,11 @@ import React, { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './Login.css';
 import google from '../../images/social/google.png';
-import { useSignInWithGoogle, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSignInWithGoogle, useSignInWithEmailAndPassword, useSendPasswordResetEmail } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -15,18 +18,24 @@ const Login = () => {
 
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
     const [signInWithEmailAndPassword, user1, loading1, error1,] = useSignInWithEmailAndPassword(auth);
+    const [sendPasswordResetEmail, sending, error2] = useSendPasswordResetEmail(auth);
 
     const handleEmail = event => {
         setEmail(event.target.value);
-    }
+    };
     const handlePassword = event => {
         setPassword(event.target.value);
-    }
+    };
 
     const handleSubmit = event => {
         event.preventDefault();
         signInWithEmailAndPassword(email, password);
-    }
+    };
+
+    const resetPassword = async () => {
+        await sendPasswordResetEmail(email);
+        toast("Reset Password Email Sent!");
+    };
 
     if (user || user1) {
         navigate(from, { replace: true });
@@ -50,7 +59,7 @@ const Login = () => {
                 <label className='mb-2' htmlFor="password">Password</label>
                 <input onBlur={handlePassword} className='mb-3 rounded-3' type="password" name="password" id="password" placeholder='Enter Your Password' />
                 <div className='d-flex justify-content-between align-items-center'>
-                    <p className='mb-0'>Forget Your Password?</p>
+                    <p onClick={resetPassword} className='mb-0'>Forget Your Password?</p>
                     <input className='submit-btn text-white rounded-pill ms-auto' type="submit" value="Login" />
                 </div>
             </form>
@@ -60,6 +69,7 @@ const Login = () => {
                 <p className='fw-bold'>Don't have an account?</p>
                 <Link to='/signup'><button className='w-100 rounded-pill text-uppercase'>Create New Account</button></Link>
             </div>
+            <ToastContainer />
         </div>
     );
 };
