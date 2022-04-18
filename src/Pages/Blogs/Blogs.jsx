@@ -41,8 +41,8 @@ const Blogs = () => {
                 </div>
                 <div>
                     <p className='fs-5'><span className='fw-bold'>Answer :</span>
-                        <li className='ms-3'><span className='fw-bold'>Authorization:</span> Authorization is the process of verifying what specific applications, files, and data a user has access to. Authentication is the first step of a good identity and access management process. 	In authentication process, the identity of users are checked for providing the access to the system. Entails use of Password, Biometrics, Voice recognition, or Fingerprint access.</li>
-                        <li className='ms-3 my-3'><span className='fw-bold'>Authentication:</span>  Authentication is the process of verifying who someone is. Authorization always takes place after authentication. While in authorization process, person’s or user’s authorities are checked for accessing the resources. Passwords may not be required. Works through a setting that is implemented by the organization.</li>
+                        <li className='ms-3'><span className='fw-bold'>Authorization:</span> Authorization is the process of verifying what specific applications, files, and data a user has access to. Authorization always takes place after authentication. While in authorization process, person’s or user’s authorities are checked for accessing the resources. Passwords may not be required. Works through a setting that is implemented by the organization.</li>
+                        <li className='ms-3 my-3'><span className='fw-bold'>Authentication:</span>  Authentication is the process of verifying who someone is. Authentication is the first step of a good identity and access management process. In authentication process, the identity of users are checked for providing the access to the system. Entails use of Password, Biometrics, Voice recognition, or Fingerprint access.</li>
                     </p>
                 </div>
             </section>
