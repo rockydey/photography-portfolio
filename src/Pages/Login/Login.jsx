@@ -16,9 +16,9 @@ const Login = () => {
     let location = useLocation();
     let from = location.state?.from?.pathname || "/home";
 
-    const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
-    const [signInWithEmailAndPassword, user1, loading1, error1,] = useSignInWithEmailAndPassword(auth);
-    const [sendPasswordResetEmail, sending, error2] = useSendPasswordResetEmail(auth);
+    const [signInWithGoogle, user] = useSignInWithGoogle(auth);
+    const [signInWithEmailAndPassword, user1, error,] = useSignInWithEmailAndPassword(auth);
+    const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
 
     const handleEmail = event => {
         setEmail(event.target.value);
@@ -58,6 +58,9 @@ const Login = () => {
                 <input onBlur={handleEmail} className='mb-3 rounded-3' type="email" name="email" id="email" placeholder='Enter Your Email' />
                 <label className='mb-2' htmlFor="password">Password</label>
                 <input onBlur={handlePassword} className='mb-3 rounded-3' type="password" name="password" id="password" placeholder='Enter Your Password' />
+                <p className='text-danger'>
+                    {error?.message}
+                </p>
                 <div className='d-flex justify-content-between align-items-center'>
                     <p onClick={resetPassword} className='mb-0'>Forget Your Password?</p>
                     <input className='submit-btn text-white rounded-pill ms-auto' type="submit" value="Login" />

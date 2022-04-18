@@ -13,6 +13,7 @@ const SignUp = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
+    const [errorValue, setErrorValue] = useState('');
     const navigate = useNavigate();
 
     const [
@@ -20,7 +21,7 @@ const SignUp = () => {
         user,
         error,
     ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
-    const [signInWithGoogle, user1, error1] = useSignInWithGoogle(auth);
+    const [signInWithGoogle, user1] = useSignInWithGoogle(auth);
 
     const handleEmail = event => {
         setEmail(event.target.value);
@@ -34,6 +35,12 @@ const SignUp = () => {
 
     const handleSubmit = event => {
         event.preventDefault();
+
+        if (password !== confirmPassword) {
+            setErrorValue("Both passwords didn't match!");
+            return;
+        }
+
         createUserWithEmailAndPassword(email, password);
         toast("Verification Email Sent!!");
     };
@@ -61,6 +68,11 @@ const SignUp = () => {
                 <input onBlur={handlePassword} className='mb-3 rounded-3' type="password" name="password" id="password" placeholder='Enter Your Password' required />
                 <label className='mb-2' htmlFor="confirm-password">Confirm Password</label>
                 <input onBlur={handleConfirmPassword} className='mb-3 rounded-3' type="password" name="password" id="confirm-password" placeholder='Enter Your Password Again' required />
+                <p className='text-danger'>
+                    {
+                        errorValue || error?.message
+                    }
+                </p>
                 <div className='mb-3'>
                     <input onClick={() => setAgree(!agree)} className='me-2' type="checkbox" name="checkbox" id="checkbox" />
                     <label htmlFor='checkbox' className={agree ? "text-success" : "text-danger"}>I accept all terms and conditions.</label>
