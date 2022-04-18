@@ -4,6 +4,14 @@
     gap: 25px;
 }
 
+.portfolio img {
+    transition: all 1s ease-in;
+}
+
+.portfolio img:hover {
+    transform: scale(1.2);
+}
+
 @media only screen and (max-width: 768px) {
 
     .portfolio {
